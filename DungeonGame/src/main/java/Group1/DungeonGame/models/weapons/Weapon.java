@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "weapons")
-public abstract class Weapon {
+public class Weapon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,12 +16,13 @@ public abstract class Weapon {
     @Column(name = "damage")
     private int damage;
 
-    public Weapon() {};
-
     public Weapon(String name, int damage) {
         this.name = name;
         this.damage = damage;
     }
+
+    public Weapon() {};
+
 
     public String getName() {
         return name;

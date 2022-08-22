@@ -18,22 +18,23 @@ public class Dataloader implements ApplicationRunner {
     public Dataloader() {}
 
     public void run(ApplicationArguments args) {
-        Weapon longSword = new Sword("Long Sword", 25);
+
+        Weapon longSword = new Weapon("Long Sword", 25);
         weaponRepository.save(longSword);
 
-        Weapon shortSword = new Sword("Short Sword", 18);
+        Weapon shortSword = new Weapon("Short Sword", 18);
         weaponRepository.save(shortSword);
 
-        Weapon battleAxe = new Axe("Battle Axe", 30);
+        Weapon battleAxe = new Weapon("Battle Axe", 30);
         weaponRepository.save(battleAxe);
 
-        Weapon handAxe = new Axe("Hand Axe", 14);
+        Weapon handAxe = new Weapon("Hand Axe", 14);
         weaponRepository.save(handAxe);
 
-        Weapon wakizashi = new Katana("Wakizashi", 28);
+        Weapon wakizashi = new Weapon("Wakizashi", 28);
         weaponRepository.save(wakizashi);
 
-        Weapon kodachi = new Katana("Kodachi", 18);
+        Weapon kodachi = new Weapon("Kodachi", 18);
         weaponRepository.save(kodachi);
     }
 }

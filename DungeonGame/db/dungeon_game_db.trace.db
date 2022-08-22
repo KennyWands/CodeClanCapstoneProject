@@ -1,0 +1,3 @@
+2022-08-22 22:30:12 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "WEAPONS" not found; SQL statement:
+SELECT * FROM weapons [42102-214]
