@@ -1,6 +1,7 @@
 package Group1.DungeonGame.models;
 
 import Group1.DungeonGame.models.weapons.Weapon;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -24,19 +25,22 @@ public class Character {
    @Column(name ="level")
     private int level;
 
-   @Column(name ="weapon")
+//   @Column(name ="weapon")
+   @JoinColumn(name ="weapon_id", nullable = false)
+//   @JsonIgnoreProperties("weapon")
     private Weapon weapon;
 
-    public Character() {
-    }
+
 
     public Character(String name, int maxHealth, int exp, int level, Weapon weapon) {
-        this.id = id;
+
         this.name = name;
         this.maxHealth = maxHealth;
         this.exp = exp;
         this.level = level;
         this.weapon = weapon;
+    }
+    public Character() {
     }
 
     public Long getId() {
