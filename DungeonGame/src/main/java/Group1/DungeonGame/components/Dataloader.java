@@ -1,10 +1,11 @@
 package Group1.DungeonGame.components;
 
+import Group1.DungeonGame.models.Character;
 import Group1.DungeonGame.models.Enemy;
-import Group1.DungeonGame.models.weapons.Axe;
-import Group1.DungeonGame.models.weapons.Katana;
-import Group1.DungeonGame.models.weapons.Sword;
+import Group1.DungeonGame.models.encounters.BattleEncounter;
 import Group1.DungeonGame.models.weapons.Weapon;
+import Group1.DungeonGame.repositories.BattleEncounterRepository;
+import Group1.DungeonGame.repositories.CharacterRepository;
 import Group1.DungeonGame.repositories.EnemyRepository;
 import Group1.DungeonGame.repositories.WeaponRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,10 @@ public class Dataloader implements ApplicationRunner {
     WeaponRepository weaponRepository;
 
     EnemyRepository enemyRepository;
+
+    CharacterRepository characterRepository;
+
+    BattleEncounterRepository battleEncounterRepository;
 
     public Dataloader() {}
 
@@ -52,5 +57,11 @@ public class Dataloader implements ApplicationRunner {
 
         Enemy Slug = new Enemy("Sam the Slug", 100, 50, 1, shortSword);
         enemyRepository.save(Slug);
+
+        Character kevin = new Character("Kevin", 100, 10,1, battleAxe);
+        characterRepository.save(kevin);
+
+        BattleEncounter battle = new BattleEncounter("First battle", Slug, 1);
+        battleEncounterRepository.save(battle);
     }
 }
