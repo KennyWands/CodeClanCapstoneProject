@@ -1,7 +1,7 @@
 package Group1.DungeonGame.controllers;
 
-import Group1.DungeonGame.models.encounters.Encounter;
-import Group1.DungeonGame.repositories.EncounterRepository;
+import Group1.DungeonGame.models.encounters.BattleEncounter;
+import Group1.DungeonGame.repositories.BattleEncounterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,23 +14,23 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class EncounterController {
+public class BattleEncounterController {
 
   @Autowired
-  EncounterRepository encounterRepository;
+  BattleEncounterRepository encounterRepository;
 
   @GetMapping(value = "/encounters")
-  public ResponseEntity<List<Encounter>> getAllEncounters(){
+  public ResponseEntity<List<BattleEncounter>> getAllEncounters(){
     return new ResponseEntity<>(encounterRepository.findAll(), HttpStatus.OK);
   }
 
   @GetMapping(value = "/encounters/{id}")
-  public ResponseEntity<Optional<Encounter>> getSingleEncounter(@PathVariable Long id){
+  public ResponseEntity<Optional<BattleEncounter>> getSingleEncounter(@PathVariable Long id){
     return new ResponseEntity<>(encounterRepository.findById(id), HttpStatus.OK);
   }
 
   @GetMapping(value = "/encounters")
-  public ResponseEntity<Encounter> createEncounter(@RequestBody Encounter encounter){
+  public ResponseEntity<BattleEncounter> createEncounter(@RequestBody BattleEncounter encounter){
     return new ResponseEntity<>(encounter, HttpStatus.CREATED);
   }
 
