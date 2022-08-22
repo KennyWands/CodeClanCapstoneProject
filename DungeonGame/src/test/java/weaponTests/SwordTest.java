@@ -4,6 +4,8 @@ import Group1.DungeonGame.models.weapons.Sword;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class SwordTest {
 
     Sword sword;
@@ -14,5 +16,12 @@ public class SwordTest {
     }
 
     @Test
-    p
+    public void canGetSwordName() {
+        assertEquals("Claw", sword.getName());
+    }
+
+    @Test
+    public void canGetSwordDamage() {
+        assertEquals(17, sword.getDamage());
+    }
 }
