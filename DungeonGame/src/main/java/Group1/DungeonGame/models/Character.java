@@ -1,5 +1,7 @@
 package Group1.DungeonGame.models;
 
+import Group1.DungeonGame.models.weapons.Weapon;
+
 import javax.persistence.*;
 
 @Entity

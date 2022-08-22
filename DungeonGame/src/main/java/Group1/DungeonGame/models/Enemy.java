@@ -2,18 +2,29 @@ package Group1.DungeonGame.models;
 
 import Group1.DungeonGame.models.weapons.Weapon;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "enemies")
 public class Enemy {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "maxHealth")
     private int maxHealth;
 
+    @Column(name ="exp")
     private int exp;
 
+    @Column(name ="level")
     private int level;
 
+    @Column(name ="weapon")
     private Weapon weapon;
 
     public Enemy(String name, int maxHealth, int exp, int level, Weapon weapon) {

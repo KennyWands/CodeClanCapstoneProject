@@ -1,9 +1,11 @@
 package Group1.DungeonGame.components;
 
+import Group1.DungeonGame.models.Enemy;
 import Group1.DungeonGame.models.weapons.Axe;
 import Group1.DungeonGame.models.weapons.Katana;
 import Group1.DungeonGame.models.weapons.Sword;
 import Group1.DungeonGame.models.weapons.Weapon;
+import Group1.DungeonGame.repositories.EnemyRepository;
 import Group1.DungeonGame.repositories.WeaponRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -14,6 +16,8 @@ import org.springframework.stereotype.Component;
 public class Dataloader implements ApplicationRunner {
     @Autowired
     WeaponRepository weaponRepository;
+
+    EnemyRepository enemyRepository;
 
     public Dataloader() {}
 
@@ -36,5 +40,17 @@ public class Dataloader implements ApplicationRunner {
 
         Weapon kodachi = new Weapon("Kodachi", 18);
         weaponRepository.save(kodachi);
+
+        Enemy Ogre = new Enemy("Og the Ogre", 100, 50, 1, shortSword);
+        enemyRepository.save(Ogre);
+
+        Enemy Troll = new Enemy("Tom the Troll", 100, 50, 1, shortSword);
+        enemyRepository.save(Troll);
+
+        Enemy Bat = new Enemy("Bob the Bat", 100, 50, 1, shortSword);
+        enemyRepository.save(Bat);
+
+        Enemy Slug = new Enemy("Sam the Slug", 100, 50, 1, shortSword);
+        enemyRepository.save(Slug);
     }
 }
