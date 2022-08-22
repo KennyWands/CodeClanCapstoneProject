@@ -18,7 +18,7 @@ public class battleEncounterTests {
 
   @BeforeEach
   public void before(){
-    testAxe = new Axe("Durin", 19);
+    testAxe = new Weapon("Durin", 19);
     testEnemy = new Enemy("Orc", 100, 20, 1, testAxe);
     testBattleEncounter = new BattleEncounter("The First Battle", testEnemy, 1);
   }
