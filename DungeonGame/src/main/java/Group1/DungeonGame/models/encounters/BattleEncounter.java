@@ -1,5 +1,7 @@
 package Group1.DungeonGame.models.encounters;
 
+import Group1.DungeonGame.models.Enemy;
+
 import javax.persistence.Id;
 
 public class BattleEncounter extends Encounter{
