@@ -22,6 +22,6 @@ public class KatanaTest {
 
     @Test
     public void canGetKatanaDamage() {
-        
+        assertEquals(17, katana.getDamage());
     }
 }
