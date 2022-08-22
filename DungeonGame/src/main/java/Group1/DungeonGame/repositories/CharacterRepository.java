@@ -1,9 +1,7 @@
 package Group1.DungeonGame.repositories;
 
-
+import Group1.DungeonGame.models.Character;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface CharacterRepository extends JpaRepository <Character, Long> {
 }
