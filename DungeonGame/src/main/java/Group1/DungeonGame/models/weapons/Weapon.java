@@ -1,7 +1,19 @@
 package Group1.DungeonGame.models.weapons;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "weapons")
 public abstract class Weapon {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "damage")
     private int damage;
 
     public Weapon() {};
