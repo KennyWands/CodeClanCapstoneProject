@@ -1,23 +1,22 @@
 package Group1.DungeonGame.models.encounters;
 
+import Group1.DungeonGame.models.Enemy;
+
 import javax.persistence.Id;
 
-public class BattleEncounter extends Encounter{
+public class BattleEncounter {
 
   @Id
   private Long id;
+
+  private String name;
   private Enemy enemy;
   private int turnCounter;
 
-
   public BattleEncounter(String name, Enemy enemy, int turnCounter) {
-    super(name);
+    this.name = name;
     this.enemy = enemy;
     this.turnCounter = turnCounter;
-  }
-
-  public BattleEncounter(String name) {
-    super(name);
   }
 
   public Long getId() {
@@ -26,6 +25,14 @@ public class BattleEncounter extends Encounter{
 
   public void setId(Long id) {
     this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public Enemy getEnemy() {
