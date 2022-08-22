@@ -1,4 +1,4 @@
-package Group1.DungeonGame.models;
+package Group1.DungeonGame.models.characters;
 
 import Group1.DungeonGame.models.weapons.Weapon;
 

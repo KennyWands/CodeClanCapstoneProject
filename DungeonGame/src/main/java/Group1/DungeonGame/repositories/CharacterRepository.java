@@ -1,4 +1,7 @@
 package Group1.DungeonGame.repositories;
 
-public interface CharacterRepository {
+import Group1.DungeonGame.models.characters.Character;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CharacterRepository extends JpaRepository<Character, Long> {
 }

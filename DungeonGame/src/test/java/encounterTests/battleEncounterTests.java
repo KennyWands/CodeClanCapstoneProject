@@ -1,9 +1,7 @@
 package encounterTests;
 
-import Group1.DungeonGame.models.Enemy;
+import Group1.DungeonGame.models.characters.Enemy;
 import Group1.DungeonGame.models.encounters.BattleEncounter;
-import Group1.DungeonGame.models.encounters.Encounter;
-import Group1.DungeonGame.models.weapons.Axe;
 import Group1.DungeonGame.models.weapons.Weapon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
