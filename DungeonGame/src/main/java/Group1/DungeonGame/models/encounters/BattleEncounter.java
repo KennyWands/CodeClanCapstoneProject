@@ -1,6 +1,6 @@
 package Group1.DungeonGame.models.encounters;
 
-import Group1.DungeonGame.models.Enemy;
+import Group1.DungeonGame.models.enemies.Enemy;
 
 import javax.persistence.*;
 

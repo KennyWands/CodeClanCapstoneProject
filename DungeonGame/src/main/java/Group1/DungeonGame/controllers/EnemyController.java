@@ -1,6 +1,6 @@
 package Group1.DungeonGame.controllers;
 
-import Group1.DungeonGame.models.Enemy;
+import Group1.DungeonGame.models.enemies.Enemy;
 import Group1.DungeonGame.repositories.EnemyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

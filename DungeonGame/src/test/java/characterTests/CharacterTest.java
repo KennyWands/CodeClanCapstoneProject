@@ -1,7 +1,6 @@
 package characterTests;
 
-import Group1.DungeonGame.models.Character;
-import Group1.DungeonGame.models.weapons.Axe;
+import Group1.DungeonGame.models.characters.Character;
 import Group1.DungeonGame.models.weapons.Weapon;
 
 import org.junit.Before;

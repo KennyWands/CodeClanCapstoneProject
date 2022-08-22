@@ -1,7 +1,7 @@
 package Group1.DungeonGame.components;
 
-import Group1.DungeonGame.models.Character;
-import Group1.DungeonGame.models.Enemy;
+import Group1.DungeonGame.models.characters.Character;
+import Group1.DungeonGame.models.enemies.Enemy;
 import Group1.DungeonGame.models.encounters.BattleEncounter;
 import Group1.DungeonGame.models.weapons.Weapon;
 import Group1.DungeonGame.repositories.BattleEncounterRepository;

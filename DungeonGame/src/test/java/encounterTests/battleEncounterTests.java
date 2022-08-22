@@ -1,6 +1,6 @@
 package encounterTests;
 
-import Group1.DungeonGame.models.Enemy;
+import Group1.DungeonGame.models.enemies.Enemy;
 import Group1.DungeonGame.models.encounters.BattleEncounter;
 import Group1.DungeonGame.models.weapons.Weapon;
 import org.junit.jupiter.api.BeforeEach;

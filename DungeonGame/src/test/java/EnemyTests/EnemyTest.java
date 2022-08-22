@@ -1,8 +1,7 @@
 package EnemyTests;
 
-import Group1.DungeonGame.models.Enemy;
+import Group1.DungeonGame.models.enemies.Enemy;
 import Group1.DungeonGame.models.weapons.Weapon;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

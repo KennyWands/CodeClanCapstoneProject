@@ -1,47 +1,41 @@
-package Group1.DungeonGame.models;
+package Group1.DungeonGame.models.enemies;
 
 import Group1.DungeonGame.models.weapons.Weapon;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name ="characters")
-public class Character {
+@Table(name = "enemies")
+public class Enemy {
 
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-   @Column (name ="name")
+    @Column(name = "name")
     private String name;
 
-   @Column(name ="maxHealth")
+    @Column(name = "maxHealth")
     private int maxHealth;
 
-   @Column(name ="exp")
-   private int exp;
+    @Column(name ="exp")
+    private int exp;
 
-   @Column(name ="level")
+    @Column(name ="level")
     private int level;
 
-//   @Column(name ="weapon")
-   @JoinColumn(name ="weapon_id", nullable = false)
-//   @JsonIgnoreProperties("weapon")
+    @Column(name ="weapon")
     private Weapon weapon;
 
-
-
-    public Character(String name, int maxHealth, int exp, int level, Weapon weapon) {
-
+    public Enemy(String name, int maxHealth, int exp, int level, Weapon weapon) {
         this.name = name;
         this.maxHealth = maxHealth;
         this.exp = exp;
         this.level = level;
         this.weapon = weapon;
     }
-    public Character() {
-    }
+
+    public Enemy(){}
 
     public Long getId() {
         return id;
